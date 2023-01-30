@@ -11,4 +11,10 @@ license = "MPL-2.0"
 repository = "https://github.com/Kampfkarren/selene"
 
 [workspace.dependencies]
-full_moon = "0.17.0"
+selene-lib = { path = "selene-lib" }
+
+# full_moon = "0.17.0"
+# full_moon = { path = "../full-moon/full-moon" }
+full_moon = { git = "https://github.com/attila-lin/full-moon.git", branch = "dev/close" }
+toml = "0.7"
+serde_yaml = "0.9.17"

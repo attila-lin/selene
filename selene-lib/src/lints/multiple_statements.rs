@@ -19,17 +19,15 @@ pub struct MultipleStatementsLint {
 
 #[derive(Clone, Copy, PartialEq, Eq, Deserialize)]
 #[serde(rename_all = "kebab-case")]
+#[derive(Default)]
 pub enum OneLineIf {
     Allow,
     Deny,
+    #[default]
     BreakReturnOnly,
 }
 
-impl Default for OneLineIf {
-    fn default() -> Self {
-        OneLineIf::BreakReturnOnly
-    }
-}
+
 
 impl Lint for MultipleStatementsLint {
     type Config = MultipleStatementsConfig;
